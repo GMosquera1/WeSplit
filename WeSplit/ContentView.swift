@@ -9,23 +9,27 @@
 import SwiftUI
 
 struct ContentView: View {
+  var name = ""
+    
     var body: some View {
-        Form {
-            Section {
-                Text("Hello, World!")
-                Text("Hello, World!")
-                Text("Hello, World!")
+
+        NavigationView {
+            Form {
+                Section {
+                    Text("Hello, World!")
+                    Text("Hello, World!")
+                    Text("Hello, World!")
+                }
+                Section {
+                    Text("Hola, Mundo!")
+                }
             }
-            Section {
-                Text("Hola, Mundo!")
-            }
+            .navigationBarTitle("Secciones",displayMode: .large)
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        //just
     }
 }
