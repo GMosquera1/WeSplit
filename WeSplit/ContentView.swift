@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  var name = ""
+  @State private var name = ""
     
     var body: some View {
 
@@ -21,7 +21,8 @@ struct ContentView: View {
                     Text("Hello, World!")
                 }
                 Section {
-                    Text("Hola, Mundo!")
+                    TextField("Hola, Mundo!", text: $name)
+                    Text("Your name is \(name)")
                 }
             }
             .navigationBarTitle("Secciones",displayMode: .large)
