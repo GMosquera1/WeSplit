@@ -24,8 +24,17 @@ struct ContentView: View {
                     TextField("Hola, Mundo!", text: $name)
                     Text("Your name is \(name)")
                 }
+                Section {
+                    TextField("Name", text: $name)
+                        .keyboardType(.decimalPad)
+                    Picker("Names of people", selection: $name) {
+                        ForEach(2..<100) {
+                            Text("\($0) people")
+                        }
+                    }
+                }
             }
-            .navigationBarTitle("Secciones",displayMode: .large)
+            .navigationBarTitle("Secciones",displayMode: .inline)
         }
     }
 }
