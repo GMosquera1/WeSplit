@@ -16,6 +16,15 @@ struct ContentView: View {
     
     let tipPercentages = [10, 15, 20, 25]
     
+    var totalPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        let stringValue = "0.5"
+        let doubleValue = Double(stringValue)
+        return 0
+    }
+    
+
+    
     var body: some View {
         
         NavigationView {
