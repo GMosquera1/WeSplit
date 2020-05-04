@@ -20,6 +20,7 @@ struct ContentView: View {
         let peopleCount = Double(numberOfPeople + 2)
         let stringValue = "0.5"
         let doubleValue = Double(stringValue)
+        let orderAmount = Double(checkAmount) ?? 0
         return 0
     }
     
