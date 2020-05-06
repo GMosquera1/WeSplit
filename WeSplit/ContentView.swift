@@ -53,7 +53,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    Text("$\(totalPerPerson)")
+                    Text("$\(totalPerPerson, specifier:"%.2f")")
                 }
                 Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip Percentage", selection: $tipPercentage) {
