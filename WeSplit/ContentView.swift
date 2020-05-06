@@ -16,13 +16,16 @@ struct ContentView: View {
     
     let tipPercentages = [10, 15, 20, 25]
     
-    var totalPerson: Double {
+    var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentages[tipPercentage])
         let stringValue = "0.5"
         let doubleValue = Double(stringValue)
         let orderAmount = Double(checkAmount) ?? 0
-        return 0
+        let tipValue = orderAmount / 100 * tipSelection
+        let grandTotal = orderAmount + tipValue
+        let amountPerPerson = grandTotal/peopleCount
+        return amountPerPerson
     }
     
 
@@ -48,6 +51,9 @@ struct ContentView: View {
                             Text("\($0) people")
                         }
                     }
+                }
+                Section {
+                    Text("$\(totalPerPerson)")
                 }
                 Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip Percentage", selection: $tipPercentage) {
