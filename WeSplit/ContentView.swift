@@ -35,11 +35,6 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    Text("Hello, World!")
-                    Text("Hello, World!")
-                    Text("Hello, World!")
-                }
-                Section {
                     TextField("Hola, Mundo!", text: $name)
                     Text("Your name is \(name)")
                 }
